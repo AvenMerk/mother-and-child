@@ -1,0 +1,27 @@
+$purple-btn: #96216B;
+$orange-btn: #E45E26;
+
+// for gradient
+
+$yellow-1: #FFC824;
+$orange-1: #F6AF1B;
+$orange-2: #F0950D;
+$orange-3: #E98C00;
+$orange-4: #E97912;
+$orange-5: #E45E26;
+$orange-6: #E34626;
+$purple-1: #B74180;
+$purple-2: #AD3677;
+$purple-3: #A62A6F;
+$purple-4: #A02169;
+$purple-5: #96216B;
+
+
+@function calcFontSize($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc( #{$k} * 100vw + #{$b} );
+}

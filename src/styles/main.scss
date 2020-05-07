@@ -1,0 +1,120 @@
+@import "dom.scss";
+@import "fonts.scss";
+@import "transitions";
+@import "constants.scss";
+@import '../../node_modules/swiper/dist/css/swiper.css';
+
+.block {
+  height: 900px;
+  &.tablet {
+    height: 1200px;
+  }
+}
+
+.cocon-font {
+  font-family: 'Cocon', sans-serif;
+}
+
+.header-text {
+  font-family: 'Cocon', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 49px;
+}
+
+.mobile {
+  .header-text {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+
+@mixin select-off() {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+@mixin btn($bg-color, $text-color) {
+  @include select-off;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 250px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  background: $bg-color;
+  color: $text-color;  font-family: 'Cocon', sans-serif;
+  font-weight: 500;
+}
+
+.btn-purple {
+  @include btn($purple-btn, white);
+  min-width: 250px;
+  &:hover {
+    @include btn($orange-btn, white);
+  }
+}
+
+.btn-orange {
+  @include btn($orange-btn, white);
+  &:hover {
+    @include btn($purple-btn, white);
+  }
+}
+
+.scroll-blocked {
+  height: 100%;
+  overflow: hidden;
+}
+
+.no-select {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+// colored rectangles
+
+.yellow-1 {
+  background-color: $yellow-1;
+}
+.orange-1 {
+  background-color: $orange-1;
+}
+.orange-2 {
+  background-color: $orange-2;
+}
+.orange-3 {
+  background-color: $orange-3;
+}
+.orange-4 {
+  background-color: $orange-4;
+}
+.orange-5 {
+  background-color: $orange-5;
+}
+.orange-6 {
+  background-color: $orange-6;
+}
+.purple-1 {
+  background-color: $purple-1;
+}
+.purple-2 {
+  background-color: $purple-2;
+}
+.purple-3 {
+  background-color: $purple-3;
+}
+.purple-4 {
+  background-color: $purple-4;
+}
+.purple-5 {
+  background-color: $purple-5;
+}
